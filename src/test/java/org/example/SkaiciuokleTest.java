@@ -29,4 +29,12 @@ class SkaiciuokleTest {
         Skaiciuokle skaiciuokle = new Skaiciuokle(3, 2);
         assertEquals(1, skaiciuokle.dalyba());
     }
+
+    @Test
+    void divisionByZeroException() {
+        Skaiciuokle skaiciuokle = new Skaiciuokle(3, 0);
+        assertThrows(ArithmeticException.class, () -> {
+            skaiciuokle.dalyba();
+        });
+    }
 }

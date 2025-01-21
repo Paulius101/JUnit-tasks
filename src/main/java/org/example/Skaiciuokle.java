@@ -22,6 +22,7 @@ public class Skaiciuokle {
     }
 
     public static int dalyba() {
+        if(b == 0) throw new ArithmeticException();
         return a / b;
     }
 }
